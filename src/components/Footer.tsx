@@ -58,7 +58,7 @@ const Footer = () => {
           <div className="lg:col-span-2">
             {/* Logo */}
             <div className="flex items-center space-x-2 mb-6">
-              <div className="w-8 h-8 bg-gradient-to-r from-primary to-accent rounded-lg flex items-center justify-center">
+              <div className="w-8 h-8 bg-gradient-to-r from-primary to-accent rounded-lg flex items-center justify-center shadow-soft">
                 <span className="text-white font-bold text-lg">L</span>
               </div>
               <span className="text-2xl font-heading font-bold">

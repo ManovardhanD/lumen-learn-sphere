@@ -19,7 +19,7 @@ const Features = () => {
       icon: BarChart3,
       title: 'Real-Time Progress Analytics',
       description: 'Track your progress with detailed analytics and personalized insights.',
-      color: 'from-accent to-primary',
+      color: 'from-accent to-warning',
     },
     {
       icon: Users,
@@ -48,7 +48,7 @@ const Features = () => {
         <div className="text-center max-w-3xl mx-auto mb-16">
           <h2 className="text-3xl md:text-5xl font-heading font-bold text-foreground mb-6">
             Next-Generation{' '}
-            <span className="gradient-text bg-gradient-to-r from-primary to-secondary bg-clip-text text-transparent">
+            <span className="bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent">
               Learning Experience
             </span>
           </h2>

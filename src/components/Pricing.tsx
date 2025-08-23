@@ -68,7 +68,7 @@ const Pricing = () => {
         <div className="text-center max-w-3xl mx-auto mb-16">
           <h2 className="text-3xl md:text-5xl font-heading font-bold text-foreground mb-6">
             Flexible{' '}
-            <span className="gradient-text bg-gradient-to-r from-primary to-secondary bg-clip-text text-transparent">
+            <span className="bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent">
               Learning Plans
             </span>
           </h2>
@@ -84,7 +84,7 @@ const Pricing = () => {
               key={plan.name}
               className={`relative p-8 rounded-2xl transition-all duration-300 hover:-translate-y-2 animate-fade-in-up ${
                 plan.popular
-                  ? 'bg-gradient-to-br from-primary/5 to-secondary/5 border-2 border-primary/20 shadow-large scale-105'
+                  ? 'bg-gradient-to-br from-primary/5 to-accent/5 border-2 border-primary/20 shadow-large scale-105'
                   : 'bg-card border border-border shadow-soft hover:shadow-medium'
               }`}
               style={{ animationDelay: `${index * 0.1}s` }}
@@ -92,7 +92,7 @@ const Pricing = () => {
               {/* Popular Badge */}
               {plan.popular && (
                 <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">
-                  <div className="bg-gradient-to-r from-primary to-secondary text-white px-6 py-2 rounded-full text-sm font-medium">
+                  <div className="bg-gradient-to-r from-primary to-accent text-white px-6 py-2 rounded-full text-sm font-medium shadow-glow">
                     Most Popular
                   </div>
                 </div>
@@ -100,9 +100,9 @@ const Pricing = () => {
 
               {/* Plan Header */}
               <div className="text-center mb-8">
-                <div className={`inline-flex items-center justify-center w-16 h-16 rounded-xl mb-4 ${
+                <div className={`inline-flex items-center justify-center w-16 h-16 rounded-xl mb-4 shadow-medium ${
                   plan.popular 
-                    ? 'bg-gradient-to-r from-primary to-secondary' 
+                    ? 'bg-gradient-to-r from-primary to-accent' 
                     : 'bg-muted'
                 }`}>
                   <plan.icon className={`w-8 h-8 ${plan.popular ? 'text-white' : 'text-muted-foreground'}`} />

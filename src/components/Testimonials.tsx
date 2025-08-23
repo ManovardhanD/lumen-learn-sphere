@@ -74,7 +74,7 @@ const Testimonials = () => {
         <div className="text-center max-w-3xl mx-auto mb-16">
           <h2 className="text-3xl md:text-5xl font-heading font-bold text-foreground mb-6">
             What Our{' '}
-            <span className="gradient-text bg-gradient-to-r from-primary to-secondary bg-clip-text text-transparent">
+            <span className="bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent">
               Students Say
             </span>
           </h2>
@@ -95,7 +95,7 @@ const Testimonials = () => {
                   <div className="bg-card rounded-2xl shadow-large p-8 lg:p-12 mx-4">
                     {/* Quote Icon */}
                     <div className="flex justify-center mb-8">
-                      <div className="w-16 h-16 bg-gradient-to-r from-primary to-secondary rounded-full flex items-center justify-center">
+                      <div className="w-16 h-16 bg-gradient-to-r from-primary to-accent rounded-full flex items-center justify-center shadow-glow">
                         <Quote className="w-8 h-8 text-white" />
                       </div>
                     </div>

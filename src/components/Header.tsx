@@ -26,7 +26,7 @@ const Header = () => {
     <header 
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
         isScrolled 
-          ? 'bg-background/95 backdrop-blur-lg shadow-soft border-b border-border' 
+          ? 'bg-background/98 backdrop-blur-xl shadow-medium border-b border-border/50' 
           : 'bg-transparent'
       }`}
     >
@@ -34,7 +34,7 @@ const Header = () => {
         <div className="flex items-center justify-between h-16 lg:h-20">
           {/* Logo */}
           <div className="flex items-center space-x-2">
-            <div className="w-8 h-8 bg-gradient-to-r from-primary to-secondary rounded-lg flex items-center justify-center">
+            <div className="w-8 h-8 bg-gradient-to-r from-primary to-accent rounded-lg flex items-center justify-center shadow-soft">
               <span className="text-white font-bold text-lg">L</span>
             </div>
             <span className="text-xl lg:text-2xl font-heading font-bold text-foreground">
@@ -84,7 +84,7 @@ const Header = () => {
 
         {/* Mobile Menu */}
         {isMobileMenuOpen && (
-          <div className="lg:hidden bg-background/95 backdrop-blur-lg border-t border-border">
+          <div className="lg:hidden bg-background/98 backdrop-blur-xl border-t border-border/50 shadow-large">
             <nav className="px-4 py-6 space-y-4">
               {navItems.map((item) => (
                 <a

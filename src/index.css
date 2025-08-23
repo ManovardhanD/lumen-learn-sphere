@@ -6,54 +6,55 @@
 
 @layer base {
   :root {
-    /* Core Brand Colors - Sophisticated & Muted */
+    /* Core Brand Colors - Rich & Sophisticated */
     --background: 0 0% 99%;
-    --foreground: 215 25% 27%;
+    --foreground: 220 25% 20%;
 
-    /* Primary - Deep Forest Green (Inspired by Allbirds) */
-    --primary: 158 25% 35%;
+    /* Primary - Deep Navy Blue (Luxury Feel) */
+    --primary: 220 50% 25%;
     --primary-foreground: 0 0% 98%;
-    --primary-hover: 158 25% 30%;
+    --primary-hover: 220 50% 20%;
 
-    /* Secondary - Warm Charcoal */
-    --secondary: 215 15% 25%;
+    /* Secondary - Rich Charcoal */
+    --secondary: 215 25% 15%;
     --secondary-foreground: 0 0% 98%;
-    --secondary-hover: 215 15% 20%;
+    --secondary-hover: 215 25% 10%;
 
-    /* Accent - Soft Sage */
-    --accent: 140 20% 85%;
-    --accent-foreground: 158 25% 35%;
-    --accent-hover: 140 20% 80%;
+    /* Accent - Warm Gold */
+    --accent: 45 80% 70%;
+    --accent-foreground: 220 50% 25%;
+    --accent-hover: 45 80% 65%;
 
     /* Surfaces */
     --card: 0 0% 100%;
-    --card-foreground: 215 25% 27%;
-    --surface-elevated: 0 0% 97%;
+    --card-foreground: 220 25% 20%;
+    --surface-elevated: 220 20% 98%;
 
     /* Interactive */
-    --muted: 210 20% 95%;
-    --muted-foreground: 215 15% 50%;
-    --border: 210 15% 90%;
-    --input: 210 15% 95%;
-    --ring: 158 25% 35%;
+    --muted: 220 15% 96%;
+    --muted-foreground: 220 15% 45%;
+    --border: 220 15% 88%;
+    --input: 220 15% 94%;
+    --ring: 220 50% 25%;
 
-    /* Status Colors - Muted */
-    --success: 142 30% 45%;
-    --warning: 35 40% 65%;
-    --destructive: 350 40% 60%;
+    /* Status Colors - Refined */
+    --success: 150 35% 45%;
+    --warning: 35 70% 60%;
+    --destructive: 0 50% 55%;
     --destructive-foreground: 0 0% 98%;
 
-    /* Gradients */
-    --gradient-primary: linear-gradient(135deg, hsl(158 25% 35%) 0%, hsl(158 25% 45%) 100%);
-    --gradient-hero: linear-gradient(135deg, hsl(215 25% 27%) 0%, hsl(158 25% 35%) 50%, hsl(140 20% 85%) 100%);
-    --gradient-card: linear-gradient(145deg, hsl(0 0% 100%) 0%, hsl(210 20% 98%) 100%);
-    --gradient-hover: linear-gradient(135deg, hsl(158 25% 30%) 0%, hsl(158 25% 40%) 100%);
+    /* Gradients - Luxury Feel */
+    --gradient-primary: linear-gradient(135deg, hsl(220 50% 25%) 0%, hsl(220 50% 35%) 100%);
+    --gradient-hero: linear-gradient(135deg, hsl(220 50% 25%) 0%, hsl(215 25% 15%) 50%, hsl(45 80% 70%) 100%);
+    --gradient-card: linear-gradient(145deg, hsl(0 0% 100%) 0%, hsl(220 20% 98%) 100%);
+    --gradient-hover: linear-gradient(135deg, hsl(220 50% 20%) 0%, hsl(220 50% 30%) 100%);
+    --gradient-accent: linear-gradient(135deg, hsl(45 80% 70%) 0%, hsl(35 70% 60%) 100%);
 
-    /* Shadows */
-    --shadow-soft: 0 2px 20px -4px hsl(215 25% 27% / 0.08);
-    --shadow-medium: 0 8px 30px -8px hsl(215 25% 27% / 0.12);
-    --shadow-large: 0 16px 50px -12px hsl(215 25% 27% / 0.15);
-    --shadow-glow: 0 0 40px hsl(158 25% 35% / 0.2);
+    /* Shadows - Premium */
+    --shadow-soft: 0 2px 20px -4px hsl(220 25% 20% / 0.08);
+    --shadow-medium: 0 8px 30px -8px hsl(220 25% 20% / 0.12);
+    --shadow-large: 0 16px 50px -12px hsl(220 25% 20% / 0.15);
+    --shadow-glow: 0 0 40px hsl(45 80% 70% / 0.3);
 
     /* Typography */
     --font-sans: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
@@ -82,22 +83,22 @@
   }
 
   .dark {
-    --background: 215 25% 15%;
+    --background: 220 25% 8%;
     --foreground: 0 0% 95%;
-    --primary: 158 25% 45%;
-    --primary-foreground: 215 25% 15%;
-    --secondary: 215 15% 20%;
+    --primary: 45 80% 70%;
+    --primary-foreground: 220 25% 8%;
+    --secondary: 220 15% 15%;
     --secondary-foreground: 0 0% 95%;
-    --accent: 140 20% 25%;
-    --accent-foreground: 0 0% 95%;
-    --card: 215 25% 18%;
+    --accent: 220 25% 20%;
+    --accent-foreground: 45 80% 70%;
+    --card: 220 25% 12%;
     --card-foreground: 0 0% 95%;
-    --muted: 215 15% 25%;
+    --muted: 220 15% 18%;
     --muted-foreground: 0 0% 70%;
-    --border: 215 15% 25%;
-    --input: 215 15% 25%;
-    --ring: 158 25% 45%;
-    --destructive: 350 40% 55%;
+    --border: 220 15% 20%;
+    --input: 220 15% 18%;
+    --ring: 45 80% 70%;
+    --destructive: 0 50% 50%;
     --destructive-foreground: 0 0% 95%;
   }
 }

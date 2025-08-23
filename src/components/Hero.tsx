@@ -16,7 +16,7 @@ const Hero = () => {
       id="home"
       className="relative min-h-screen flex items-center justify-center overflow-hidden"
       style={{
-        backgroundImage: `linear-gradient(135deg, rgba(33, 37, 41, 0.8) 0%, rgba(52, 73, 94, 0.6) 50%, rgba(140, 158, 121, 0.4) 100%), url(${heroBackground})`,
+        backgroundImage: `linear-gradient(135deg, rgba(52, 73, 94, 0.85) 0%, rgba(33, 37, 41, 0.7) 50%, rgba(180, 150, 70, 0.3) 100%), url(${heroBackground})`,
         backgroundSize: 'cover',
         backgroundPosition: 'center',
         backgroundAttachment: 'fixed',
@@ -34,7 +34,7 @@ const Hero = () => {
           {/* Main Heading */}
           <h1 className="text-4xl md:text-6xl lg:text-7xl font-heading font-bold text-white mb-6 animate-fade-in-up">
             Future-Proof Your Career With{' '}
-            <span className="gradient-text bg-gradient-to-r from-accent to-primary bg-clip-text text-transparent">
+            <span className="bg-gradient-to-r from-accent to-warning bg-clip-text text-transparent">
               AI-Powered Learning
             </span>
           </h1>

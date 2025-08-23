@@ -61,7 +61,7 @@ const Courses = () => {
         <div className="text-center max-w-3xl mx-auto mb-16">
           <h2 className="text-3xl md:text-5xl font-heading font-bold text-foreground mb-6">
             Popular{' '}
-            <span className="gradient-text bg-gradient-to-r from-primary to-secondary bg-clip-text text-transparent">
+            <span className="bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent">
               Courses
             </span>
           </h2>
