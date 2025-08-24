@@ -71,3 +71,32 @@ Yes, you can!
 To connect a domain, navigate to Project > Settings > Domains and click Connect Domain.
 
 Read more here: [Setting up a custom domain](https://docs.lovable.dev/tips-tricks/custom-domain#step-by-step-guide)
+
+# Frontend + Backend Setup
+
+## Backend (Spring Boot)
+
+- Path: `backend`
+- Build: `cd backend && mvn -DskipTests package`
+- Run: `java -jar target/backend-0.0.1-SNAPSHOT.jar`
+- Base URL: `http://localhost:8080/api`
+
+### Endpoints
+- POST `/api/auth/signup`
+- POST `/api/auth/login`
+- GET `/api/users/profile` (Bearer token)
+- GET `/api/courses`
+- GET `/api/courses/{id}`
+- POST `/api/courses` (INSTRUCTOR)
+- PUT `/api/courses/{id}` (INSTRUCTOR)
+- DELETE `/api/courses/{id}` (INSTRUCTOR)
+- POST `/api/courses/enroll` (STUDENT)
+- GET `/api/enrollments/user/{userId}` (Bearer token)
+
+### Dev Credentials (seeded)
+- instructor@example.com / password
+- student@example.com / password
+
+## Frontend
+- Build/Run: `bun install` or `npm i`, then `bun dev` or `npm run dev`
+- API base set to `http://localhost:8080/api` in `src/services/api.ts`
