@@ -1,11 +1,71 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import { Button } from '@/components/ui/button';
-import { Star, Clock, Users, BookOpen } from 'lucide-react';
+import { Card, CardContent } from '@/components/ui/card';
+import { Badge } from '@/components/ui/badge';
+import { Star, Clock, Users, BarChart3, Loader2, BookOpen } from 'lucide-react';
+import { useAuth } from '@/contexts/AuthContext';
+import { apiService } from '@/services/api';
+import { useToast } from '@/hooks/use-toast';
 import courseAiMl from '@/assets/course-ai-ml.jpg';
 import courseDataScience from '@/assets/course-data-science.jpg';
 import courseUxUi from '@/assets/course-ux-ui.jpg';
 
 const Courses = () => {
+  const [backendCourses, setBackendCourses] = useState([]);
+  const [isLoading, setIsLoading] = useState(false);
+  const [enrollingCourseId, setEnrollingCourseId] = useState<number | null>(null);
+  const { isAuthenticated } = useAuth();
+  const { toast } = useToast();
+
+  // Mock function to fetch courses from backend
+  const fetchCourses = async () => {
+    setIsLoading(true);
+    try {
+      // This would connect to your Spring Boot backend
+      // const courses = await apiService.getCourses();
+      // setBackendCourses(courses);
+      
+      // For now, we'll use the mock data
+      setIsLoading(false);
+    } catch (error) {
+      console.error('Failed to fetch courses:', error);
+      setIsLoading(false);
+    }
+  };
+
+  const handleEnroll = async (courseId: number) => {
+    if (!isAuthenticated) {
+      toast({
+        title: "Login required",
+        description: "Please log in to enroll in courses.",
+        variant: "destructive",
+      });
+      return;
+    }
+
+    setEnrollingCourseId(courseId);
+    try {
+      // This would connect to your Spring Boot backend
+      // await apiService.enrollInCourse({ courseId });
+      
+      toast({
+        title: "Enrollment successful!",
+        description: "You've been enrolled in the course.",
+      });
+    } catch (error) {
+      toast({
+        title: "Enrollment failed",
+        description: "Please try again later.",
+        variant: "destructive",
+      });
+    } finally {
+      setEnrollingCourseId(null);
+    }
+  };
+
+  useEffect(() => {
+    fetchCourses();
+  }, []);
   const courses = [
     {
       id: 1,
@@ -150,8 +210,20 @@ const Courses = () => {
                       {course.originalPrice}
                     </span>
                   </div>
-                  <Button variant="default" size="sm">
-                    Enroll Now
+                  <Button 
+                    variant="default" 
+                    size="sm"
+                    onClick={() => handleEnroll(course.id)}
+                    disabled={enrollingCourseId === course.id}
+                  >
+                    {enrollingCourseId === course.id ? (
+                      <>
+                        <Loader2 className="w-4 h-4 mr-2 animate-spin" />
+                        Enrolling...
+                      </>
+                    ) : (
+                      isAuthenticated ? 'Enroll Now' : 'Login to Enroll'
+                    )}
                   </Button>
                 </div>
               </div>
